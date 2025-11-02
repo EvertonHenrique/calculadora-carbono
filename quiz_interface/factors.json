@@ -1,0 +1,31 @@
+{
+  "energia": {
+    "descricao": "Consumo de energia elétrica em kWh",
+    "fator": 0.084
+  },
+  "transporte": {
+    "carro": 0.192,
+    "moto": 0.103,
+    "onibus": 0.089,
+    "metro": 0.041,
+    "bike": 0.0,
+    "caminhada": 0.0
+  },
+  "carne": {
+    "descricao": "Consumo de carne bovina em kg",
+    "fator": 27.0
+  },
+  "aviao": {
+    "descricao": "Horas de voo por ano",
+    "fator": 90.0
+  },
+  "lixo": {
+    "descricao": "Quantidade de lixo gerado por semana (kg)",
+    "fator": 1.9
+  },
+  "precos": {
+    "Reflorestamento": 40,
+    "Energia Renovável": 55,
+    "Captura e Armazenamento": 120
+  }
+}
