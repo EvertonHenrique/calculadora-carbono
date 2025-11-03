@@ -4,21 +4,21 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Mercados</title>
-     <link rel="stylesheet" href="../static/css/style.css">
-     <link rel="shortcut icon" href="../static/icones/favicon.ico" type="image/x-icon">
+     <title>{{ nome }}</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+     <link rel="shortcut icon" href="{{ url_for('static', filename='icones/favicon.ico')}}" type="image/x-icon">
 </head>
 
 <body>
      <header>
-          <h1>Mercados de Crédito de Carbono</h1>
+          <h1>{{ nome }}</h1>
      </header>
 
      <nav>
-          <button type="submit"><a href="../templates/homepage.html">Introdução</a></button>
-          <button type="submit"><a href="../templates/metodologias.html">Metodologias</a></button>
-          <button type="submit"><a href="../calculadora/quiz_interface.py">APP-Calculadora</a></button>
-
+          <a href="{{ url_for('index') }}">Inicio</a>
+          <a href="/creditos">Principios Básicos dos Créditos de Carbono</a>
+          <a href="/metodologias">Metodologias de Calculo de Emissões</a>
+          <a href="/mercados">Mercados de Carbono</a>
      </nav>
 
      <main>
@@ -38,7 +38,7 @@
      </main>
 
      <footer>
-          <p>© 2025 Crédito de Carbono. Todos os direitos reservados.</p>
+          <p>© 2025 Emissões de CO2. Todos os direitos reservados.</p>
      </footer>
 
 </body>

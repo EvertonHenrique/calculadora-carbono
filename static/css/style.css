@@ -6,16 +6,17 @@
 :root {
      --fonte-principal: 'Arial';
      --fonte-tamanho: 12px;
-     --cor01: #3aff09;
-     --cor02: #2fd705;
-     --cor03: #29a909;
-     --cor04: #1b6a07;
-     --cor05: #0e3903;
-     --cor-fundo: #cdffcd;
-     --cor-botao: #2e6123;
-     --cor-botao-hover: #9bffa0;
+     --cor01: #54ff29;
+     --cor02: #34e009;
+     --cor03: #27ae06;
+     --cor04: #1f7c08;
+     --cor05: #1b7006;
+     --cor06: #134d03;
+     --cor-fundo: #c0fdc0;
+     --cor-botao: #25960b;
+     --cor-botao-hover: #5df365;
      --cor-texto: #0a4504;
-     --cor-texto-botao: #f7ffe6;
+     --cor-texto-botao: #e7ffe7;
      --cor-rodape: #485545;
  }
 
@@ -23,101 +24,115 @@
     margin: 0px;
     padding: 0px;
     font-family: var(--fonte-principal);
-    font-size: var(--fonte-tamanho);
  }
  
  body {
      background-color: var(--cor-fundo);
      color: var(--cor-texto);
      text-align: justify;
-     text-overflow: clip;
-     margin: auto;
  }
  header {
-     height: 75px;
-     background-image: linear-gradient(to top, var(--cor02), var(--cor04));
-     padding-top: 15px;
-     margin: auto;
-     text-align: center;
+    height: 65px;
+    background-image: linear-gradient(to top, var(--cor01), var(--cor06)); ;
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-indent: 2%;
+    text-transform: capitalize;
+    text-align: center;
+    box-shadow: inset 3px 2px 22px 3px var(--cor01);
      
  }
 
  header h1 {
-     font-size: 32px;
-     color: #77fb7c;
-     text-shadow: 2px 2px 4px #000000;
+     color: var(--cor01);
+     text-shadow: 2px 2px 4px #0e2713;
  }
  
  nav {
-    display: block;
-    background-color: var(--cor-botao);
+    background-image: linear-gradient(to top, var(--cor01), var(--cor06));
     color: var(--cor-texto-botao);
-    box-shadow: 0px 4px 6px var(--cor03, --cor02);
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    box-shadow: inset 10px 26px 69px 30px var(--cor01);
+    box-sizing: border-box;
+    text-indent: 3%;
     text-transform: capitalize;
+    display: flex;
  }
  
- nav > button {
+ nav a {
     font-weight: bold;
-    font-size: 12px;
+    background-size: auto;
+    background-repeat: no-repeat;
     background-color: var(--cor-botao);
     color: var(--cor-texto-botao);
-    border-radius: 12px;
-    padding: 10px 20px;
+    min-width: 100px;
+    max-width: 700px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
     text-decoration: none;
-    font-size: 12px;
-    display: inline-flex;
     transition-duration: 0.5s;
-    cursor: pointer;
     
  }
  
- nav > button:hover {
+ nav a:hover {
     background-color: var(--cor-botao-hover);
     color: var(--cor05);
- }  
+ }
 
- button a {
+
+ nav a::after {
+    background-color: var(--cor03);
     height: 10px;
-    text-align: justify;
+    text-align: center;
     text-decoration: none;
-    color: inherit;
-    align-items: normal;
-    display: flex;
+    color: var(--cor03);
+ }
+  
+ a { 
+      background-color: var(--cor-botao);
  }
 
  main {
-    width: 600px;
-    height: 200px;
     background-color: white;
+    background-clip: padding-box;
     color: forestgreen;
-    margin: 0px;
-    padding: 5px;
-    position: relative;
+    margin: auto;
+    padding: 10px 15px;
+    text-align: center;
+    text-shadow: #63ff53 1px 1px 1px;;
+    display: flex;
  }
 
- .conteudo {
-    margin: 15px;
-    padding: 10px;
-    text-align: left;
-    font-size: 16px;
+ main article {
+   margin: 10px;
+   padding: 10px;
+   border: 0px solid #255531;
  }
+ 
 
- article {
+ section {
      border: 0px solid green;
      margin: 20px;
      padding: 10px;
      display: flex;
      align-items: center;
      justify-content: center;
-     background-position: left bottom;
+     background-position: left center;
+}
+
+section.conteudo {
+   margin: 15px;
+   padding: 10px;
+   text-align: left;
+   font-size: 16px;
 }
 
  footer {
      background-color: var(--cor-rodape);
-     padding: auto;
-     margin: auto;
+     padding: 0px;
+     margin: 0px;
      color: lightgreen;
      
  }
@@ -125,5 +140,6 @@
  footer p {
      text-align: center;
      font-size: 14px;
-     margin: 15px;
+     margin: 15px 10px;
+     padding: 12px;
  }

@@ -4,7 +4,7 @@
 <head>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>Crédito de Carbono</title>
+     <title>{{ nome }}</title>
      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
      <link rel="shortcut icon" href="{{url_for('static', filename='icones/favicon.ico')}}" type="image/x-icon">
 
@@ -12,23 +12,27 @@
 
 <body>
      <header>
-          <h1>Crédito de Carbono</h1>
+          <h1><img src="" alt=""></h1>
      </header>
 
      <nav>
-          <a href="{{ url_for }}">Créditos de Carbono</a>
-          <a href="#">Metodologias de Cálculo de Emissões</a>
-          <a href="#">Mercados de Carbono</a>
+          <a href="{{ url_for('index') }}">Inicio</a>
+          <a href="/creditos">Principios Básicos dos Créditos de Carbono</a>
+          <a href="/metodologias">Metodologias de Calculo de Emissões</a>
+          <a href="/mercados">Mercados de Carbono</a>
      </nav>
 
      <main>
           <section>
                <article>
-                    <h2>Introdução sobre Crédito de Carbono</h2>
-                    <p></p>
+                    <h2></h2>
                </article>
           </section>
      </main>
+
+     <footer>
+          <p>© 2025 Emissões de CO2. Todos os direitos reservados.</p>
+     </footer>
 </body>
 
 </html>
