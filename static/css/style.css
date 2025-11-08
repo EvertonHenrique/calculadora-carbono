@@ -4,7 +4,7 @@
 
 
 :root {
-<<<<<<< HEAD
+/*<<<<<<< HEAD*/
      --fonteprincipal: 'Arial';
      --font-padrao: 12px;
      --cor01: #3aff09;
@@ -17,7 +17,6 @@
      --cor-botao-hover: #9bffa0;
      --cor-texto: #0a4504;
      --cor-texto-botao: #f7ffe6;
-=======
      --fonte-principal: 'Arial';
      --fonte-tamanho: 12px;
      --cor01: #54ff29;
@@ -31,26 +30,23 @@
      --cor-botao-hover: #5df365;
      --cor-texto: #0a4504;
      --cor-texto-botao: #e7ffe7;
->>>>>>> 341f67e2e5a447efe5db47f8dcc5614f3c7133f2
      --cor-rodape: #485545;
  }
 
  * {
-<<<<<<< HEAD
+/*<<<<<<< HEAD*/
    font-family: var(--fonteprincipal);
    
-=======
+/*=======*/
     margin: 0px;
     padding: 0px;
     font-family: var(--fonte-principal);
->>>>>>> 341f67e2e5a447efe5db47f8dcc5614f3c7133f2
  }
  
  body {
      background-color: var(--cor-fundo);
      color: var(--cor-texto);
      text-align: justify;
-<<<<<<< HEAD
      margin: auto;
  }
  header {
@@ -59,7 +55,7 @@
      padding-top: 10px;
      margin: auto;
      text-align: center;
-=======
+
  }
  header {
     height: 65px;
@@ -71,12 +67,11 @@
     text-transform: capitalize;
     text-align: center;
     box-shadow: inset 3px 2px 22px 3px var(--cor01);
->>>>>>> 341f67e2e5a447efe5db47f8dcc5614f3c7133f2
      
  }
 
  header h1 {
-<<<<<<< HEAD
+/**/
      font-size: 32px;
      color: #77fb7c;
      text-shadow: 2px 2px 4px #000000;
@@ -124,10 +119,9 @@
 
  main {
    /*max-width: 500px; */
-   background-color: white;
-   color: forestgreen;
-   margin: auto;
-=======
+     background-color: white;
+     color: forestgreen;
+     margin: auto;
      color: var(--cor01);
      text-shadow: 2px 2px 4px #0e2713;
  }
@@ -162,7 +156,7 @@
  nav a:hover {
     background-color: var(--cor-botao-hover);
     color: var(--cor05);
->>>>>>> 341f67e2e5a447efe5db47f8dcc5614f3c7133f2
+
  }
 
 
@@ -215,13 +209,13 @@ section.conteudo {
 
  footer {
      background-color: var(--cor-rodape);
-<<<<<<< HEAD
+/*<<<<<<< HEAD
      padding: auto;
      margin: auto;
-=======
+=======*/
      padding: 0px;
      margin: 0px;
->>>>>>> 341f67e2e5a447efe5db47f8dcc5614f3c7133f2
+/*>>>>>>> 341f67e2e5a447efe5db47f8dcc5614f3c7133f2*/
      color: lightgreen;
      
  }
@@ -229,7 +223,6 @@ section.conteudo {
  footer p {
      text-align: center;
      font-size: 14px;
-<<<<<<< HEAD
      margin: 12px;
  }
 
@@ -353,8 +346,5 @@ section.conteudo {
     top: 300px;
     
 }
-=======
-     margin: 15px 10px;
-     padding: 12px;
- }
->>>>>>> 341f67e2e5a447efe5db47f8dcc5614f3c7133f2
+ 
+/*>>>>>>> 341f67e2e5a447efe5db47f8dcc5614f3c7133f2*/

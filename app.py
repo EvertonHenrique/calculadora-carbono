@@ -1,9 +1,7 @@
-<<<<<<< HEAD
+
 from flask import Flask, render_template, request, jsonify
 import json, math
-=======
 from flask import Flask, render_template, url_for
->>>>>>> 341f67e2e5a447efe5db47f8dcc5614f3c7133f2
 
 site = Flask(__name__)
 
@@ -30,7 +28,7 @@ if __name__ == '__main__':
 with open("factors.json", "r", encoding="utf-8") as f:
     fatores = json.load(f)
 
-<<<<<<< HEAD
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -98,6 +96,4 @@ def calcular():
 
 if __name__ == '__main__':
     app.run(debug=True)
-=======
 
->>>>>>> 341f67e2e5a447efe5db47f8dcc5614f3c7133f2
