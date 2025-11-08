@@ -1,9 +1,0 @@
-{
-          "editor.formatOnSave": true,
-          "files.autoSave": "onFocusChange",
-          "editor.defaultFormatter": null,
-          "editor.wordWrap": "on",
-      "editor.tabSize": 7,
-      "editor.aiStats.enabled": true,
-      "editor.autoIndentOnPaste": true
-}
