@@ -1,0 +1,200 @@
+/* ===================================================
+   🌱 Estilo Moderno - Calculadora de Crédito de Carbono
+   Autor: Uriel Rodrigues de Oliveira
+   =================================================== */
+
+:root {
+  --verde-escuro: #1b5e20;
+  --verde-medio: #43a047;
+  --verde-claro: #a5d6a7;
+  --verde-destaque: #4caf50;
+  --branco: #ffffff;
+  --sombra: rgba(0, 0, 0, 0.15);
+  --cinza-claro: #f5f5f5;
+  --transicao: all 0.3s ease;
+  --fonte-principal: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Corpo */
+body {
+  font-family: var(--fonte-principal);
+  margin: 0;
+  background: linear-gradient(180deg, #e8f5e9, #f1f8e9);
+  color: var(--verde-escuro);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+  background: var(--verde-medio);
+  color: var(--branco);
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 2px 10px var(--sombra);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: var(--branco);
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transicao);
+}
+
+nav a:hover {
+  color: var(--verde-claro);
+  text-decoration: underline;
+}
+
+/* Seções */
+section {
+  padding: 25px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Container principal do quiz */
+#quiz-container {
+  background: var(--branco);
+  border-radius: 16px;
+  max-width: 520px;
+  margin: 30px auto;
+  padding: 30px;
+  box-shadow: 0 4px 20px var(--sombra);
+  transition: var(--transicao);
+}
+
+#quiz-container:hover {
+  transform: translateY(-4px);
+}
+
+/* Perguntas */
+#pergunta-container h3 {
+  color: var(--verde-medio);
+  margin-bottom: 15px;
+}
+
+/* Campos de entrada */
+input, select {
+  width: 80%;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  transition: var(--transicao);
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--verde-destaque);
+  box-shadow: 0 0 4px var(--verde-claro);
+}
+
+/* Botões */
+button {
+  background-color: var(--verde-destaque);
+  color: var(--branco);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: var(--transicao);
+}
+
+button:hover {
+  background-color: var(--verde-medio);
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: var(--verde-escuro);
+  transform: scale(0.98);
+}
+
+/* Resultado */
+#resultado-container {
+  display: none;
+  background: var(--branco);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px var(--sombra);
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+#resultado-container h3, 
+#resultado-container h4 {
+  color: var(--verde-medio);
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  line-height: 1.7;
+}
+
+li {
+  text-align: left;
+  margin-left: 18%;
+}
+
+/* Gráfico */
+canvas {
+  display: block;
+  margin: 25px auto;
+  max-width: 420px;
+}
+
+/* Botões finais */
+.botoes-finais {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.botoes-finais button {
+  margin: 8px;
+  padding: 12px 22px;
+  font-size: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px var(--sombra);
+}
+
+/* Rodapé */
+footer {
+  background: var(--verde-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 12px;
+  margin-top: auto;
+  font-size: 14px;
+  box-shadow: 0 -2px 10px var(--sombra);
+  letter-spacing: 0.3px;
+}
+
+footer p {
+  margin: 0;
+  opacity: 0.9;
+}

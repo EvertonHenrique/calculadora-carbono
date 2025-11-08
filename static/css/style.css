@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 :root {
-     --fonteprincipal: 'Arial', 'sans-serif';
+     --fonteprincipal: 'Arial';
+     --font-padrao: 12px;
      --cor01: #3aff09;
      --cor02: #2fd705;
      --cor03: #29a909;
@@ -12,55 +13,213 @@
      --cor-botao-hover: #9bffa0;
      --cor-texto: #0a4504;
      --cor-texto-botao: #f7ffe6;
+     --cor-rodape: #485545;
+ }
+
+ * {
+   font-family: var(--fonteprincipal);
+   
  }
  
  body {
-     font-family: var(--fonteprincipal);
      background-color: var(--cor-fundo);
      color: var(--cor-texto);
      text-align: justify;
-    
+     margin: auto;
  }
  header {
-     height: 150px;
-     background-image: linear-gradient(to top, var(--cor03), var(--cor02), var(--cor01));
-     padding: 12px;
+     height: 75px;
+     background-image: linear-gradient(to top, var(--cor02), var(--cor04));
+     padding-top: 10px;
      margin: auto;
-     border-top-right-radius: 12px;
-     border-top-left-radius: 12px;
+     text-align: center;
+     
+ }
+
+ header h1 {
+     font-size: 32px;
+     color: #77fb7c;
+     text-shadow: 2px 2px 4px #000000;
  }
  
  nav {
+    font-weight: bold;
+    display: inline-block;
     background-color: var(--cor-botao);
     color: var(--cor-texto-botao);
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-transform: capitalize;
+    margin-left: 580px;
  }
  
  nav > button {
-    background-color: var(--cor-botao);
+    font-weight: bold;
+    font-size: 12px;    background-color: var(--cor-botao);
     color: var(--cor02);
-    border-radius: 15px;
+    border-radius: 12px;
     padding: 10px 20px;
-    text-align: center;
-    text-decoration: underline;
+    text-align: justify;
+    text-decoration: none;
+    font-size: 12px;
     display: inline-block;
-    font-size: 18px;
-    margin: 4px 2px;
+    margin: 6px 4px solid var(--cor-fundo);
+    transition-duration: 0.5s;
     cursor: pointer;
     
  }
-
+ 
  nav > button:hover {
     background-color: var(--cor-botao-hover);
     color: var(--cor05);
  }  
 
- main {
+ button a {
+    height: 10px;
+    text-decoration: none;
+    color: inherit;
+    align-items: normal;
+    display: inline-block;
+ }
 
+ main {
+   /*max-width: 500px; */
+   background-color: white;
+   color: forestgreen;
+   margin: auto;
  }
 
  footer {
-     
+     background-color: var(--cor-rodape);
+     padding: auto;
+     margin: auto;
+     color: lightgreen;
      
  }
+
+ footer p {
+     text-align: center;
+     font-size: 14px;
+     margin: 12px;
+ }
+
+ 
+ /*1. Pagina inicial */
+.paginaInicial {
+    background-image: linear-gradient(to left, var(--cor02), var(--cor04));
+    display: flex;
+    
+}
+
+
+.paginaInicialTexto {
+    margin-right: 100px;
+    margin-top: 60px;
+    color: var(--cor-texto-botao);
+    background-color: var(--cor-texto);
+    padding:  0px 20px 0px;
+    border-radius: 20px;
+    
+}
+
+.paginaInicialTexto h1 {
+    text-align: center;
+    color: var(--cor02);
+}
+
+.paginaInicialTexto p {
+    font-size: 23px;
+    text-align: left;
+    padding: 10px 0px 30px;
+}
+
+
+
+.paginaInicial a {
+    height: 60px;
+    width: 400px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: var(--cor-botao);
+    color: var(--cor02);
+    border-radius: 12px;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 6px 4px solid var(--cor-fundo);
+    transition-duration: 0.5s;
+}
+
+.paginaInicial a:hover{
+    background-color: var(--cor-botao-hover);
+    color: var(--cor05);
+}
+
+.paginaInicialImagem {
+    width: 800px;
+    height: 500px;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 40px;
+    
+}
+
+
+/*2. principiosBasicos*/
+.conteinerTexto {
+    margin: 0px 0px;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;    
+}
+
+.textoPrincipiosBásicos{
+    flex: 4;
+    padding: 0px 20px 0px;
+    margin: 20px 20px 0px;
+    background-color: var(--cor-fundo);
+    border-radius: 3px;
+    border: #29a909;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    text-indent: 16px;
+}
+
+.textoPrincipiosBásicos h2{
+    text-align: center;
+}
+
+.imgTextoPrinciopiosBásicos {
+    width: 350px;
+    height: 200px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/*3. Anuncios na Lateral*/
+.anuncios{
+    margin: 20px 0px 0px;
+    background-color: rgb(243, 242, 245);
+    flex: 1.2;
+    
+    
+}
+
+.anuncio1{
+    position: sticky;
+    top: 1px;
+}
+
+.anuncio2{
+    width: 210px ;
+    height: 300px;
+    margin: 110px 0px 0px;
+    display: block;
+    position: sticky;
+    top: 300px;
+    
+}
