@@ -1,7 +1,7 @@
 # calculadora-carbono
 APS-Calculadora de Carbono - Trabalho - CC02P07 - Unip
 <ul>
-  <li>Nome dos Integrantes do Grupo: </li>
+  <li>Nome dos Desenvolvedores do Grupo: </li>
   <ul>
      <li>Evandro</li>
      <li>Everton</li>
