@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dc5b302-92cc-451b-930f-414e3174a9db" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/site-credito-carbono.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/site-credito-carbono.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scriptJs.url" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imagens/FOTO-PRINCIPAL-A-CREDITO-AdobeStock-md.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imagens/FOTO-PRINCIPAL-A-CREDITO-AdobeStock-pq.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/javascript/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/javascript/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/javascript/script.js.url" beforeDir="false" afterPath="$PROJECT_DIR$/static/javascript/script.js.url" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/javascript2/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/script.url" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/emissoes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mercadoDeCarbono.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/principiosBasicosCB.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +219,7 @@
       <workItem from="1762966202650" duration="1392000" />
       <workItem from="1763010963447" duration="391000" />
       <workItem from="1763011370203" duration="3329000" />
-      <workItem from="1763129767886" duration="939000" />
+      <workItem from="1763129767886" duration="1421000" />
     </task>
     <servers />
   </component>
@@ -257,7 +239,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/calculadora_py$app.coverage" NAME="app Coverage Results" MODIFIED="1762495160602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/app_py$site_credito_carbono.coverage" NAME="site-credito-carbono Coverage Results" MODIFIED="1763130720547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/app_py$site_credito_carbono.coverage" NAME="site-credito-carbono Coverage Results" MODIFIED="1763130790358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/calculadora_py$calculadora.coverage" NAME="calculadora Coverage Results" MODIFIED="1762494830860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/app_py$app.coverage" NAME="app Coverage Results" MODIFIED="1762702101935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

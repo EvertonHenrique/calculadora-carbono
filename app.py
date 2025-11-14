@@ -12,12 +12,12 @@ with open("factors.json", "r", encoding="utf-8") as f:
 def index():
     return render_template('index.html')
 
-# Acesso ao site de pesquisa
+# Introdução ao Site
 @app.route('/about')
 def about():
     return render_template('about.html')
 
-
+# Acesso ao site de pesquisa
 @app.route('/creditosCarbono')
 def creditosCarbono():
     return render_template('creditosCarbono.html')
