@@ -7,26 +7,21 @@ app = Flask(__name__)
 with open("factors.json", "r", encoding="utf-8") as f:
     fatores = json.load(f)
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
+# Acesso ao site de pesquisa
 @app.route('/about')
 def about():
     return render_template('about.html')
 
 
-@app.route('/mercadoDeCarbono')
-def mercadoDeCarbono():
-    return render_template('mercadoDeCarbono.html')
+@app.route('/creditosCarbono')
+def creditosCarbono():
+    return render_template('creditosCarbono.html')
 
-@app.route('/principiosBasicosCB')
-def principiosBasicosCB():
-    return render_template('principiosBasicosCB.html')
-
-@app.route('/emissoes')
-def emissoes():
-    return render_template('emissoes.html')
 
 
 @app.route('/calcular', methods=['POST'])

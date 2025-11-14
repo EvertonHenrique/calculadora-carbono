@@ -1,7 +1,7 @@
 // ======================================================
 // 🌱 Calculadora de Crédito de Carbono
 // Autor: Uriel Rodrigues de Oliveira
-// Versão aprimorada com UX e Chart.js moderno
+// Versão aprimorada com créditos de carbono + gráfico colorido
 // ======================================================
 
 // Lista de perguntas
@@ -104,12 +104,18 @@ function mostrarResultado(data) {
   btnProximo.style.display = "none";
   resultadoContainer.style.display = "block";
 
+  // 💰 Cálculo de créditos e custo total
+  const creditoCarbono = data.total_toneladas; // 1 crédito = 1 tonelada
+  const precoMedio = Object.values(data.compensacoes).reduce((a, b) => a + b, 0) / Object.keys(data.compensacoes).length;
+  const custoTotal = (creditoCarbono * precoMedio).toFixed(2);
+
   resultadoContainer.innerHTML = `
     <h3>🌍 Resultado Final</h3>
     <p>Você emite aproximadamente <b>${data.total_toneladas}</b> toneladas de CO₂e por ano.</p>
-    <p>Isso equivale a plantar <b>${data.arvores}</b> árvores 🌳</p>
-    <h4>💰 Custos de Compensação:</h4>
-    <ul>${Object.entries(data.compensacoes).map(([k,v]) => `<li>${k}: R$ ${v.toFixed(2)}</li>`).join("")}</ul>
+    <p>Isso equivale a <b>${creditoCarbono.toFixed(2)}</b> créditos de carbono 🌿</p>
+    <p>Ou seja, seria necessário plantar <b>${data.arvores}</b> árvores 🌳 para compensar.</p>
+    <h4>💰 Custo estimado de compensação:</h4>
+    <p><b>R$ ${custoTotal}</b></p>
     <h4>📊 Distribuição das Emissões:</h4>
     <canvas id="graficoPizza" width="400" height="400"></canvas>
     <div class="botoes-finais">
@@ -123,27 +129,42 @@ function mostrarResultado(data) {
   document.getElementById("btn-relatorio").addEventListener("click", () => gerarRelatorio(data));
 }
 
-// Gráfico em pizza - Chart.js 4
+// 🎨 Gráfico colorido por categoria
 function desenharGrafico(categorias) {
   const ctx = document.getElementById("graficoPizza").getContext("2d");
-  const coresVerdes = ["#2e7d32", "#43a047", "#66bb6a", "#81c784", "#a5d6a7"];
+
+  const coresPorCategoria = {
+    Energia: "#ffb300",    // amarelo
+    Transporte: "#1976d2", // azul
+    Alimentação: "#d32f2f",// vermelho
+    Viagens: "#9c27b0",    // roxo
+    Resíduos: "#4caf50"    // verde
+  };
+
   new Chart(ctx, {
     type: "pie",
     data: {
       labels: Object.keys(categorias),
       datasets: [{
         data: Object.values(categorias),
-        backgroundColor: coresVerdes,
+        backgroundColor: Object.keys(categorias).map(k => coresPorCategoria[k] || "#81c784"),
         borderColor: "#fff",
         borderWidth: 2,
       }]
     },
     options: {
       plugins: {
-        legend: { position: "bottom", labels: { color: "#1b5e20" } },
-        tooltip: { backgroundColor: "#4caf50", titleColor: "#fff" }
+        legend: { position: "bottom", labels: { color: "#1b5e20", font: { size: 14 } } },
+        tooltip: {
+          backgroundColor: "#2e7d32",
+          titleColor: "#fff",
+          bodyColor: "#fff",
+          callbacks: {
+            label: (context) => `${context.label}: ${context.parsed.toFixed(1)} kg CO₂e`
+          }
+        }
       },
-      animation: { animateRotate: true, duration: 1500 }
+      animation: { animateRotate: true, duration: 1600 }
     }
   });
 }
@@ -162,17 +183,19 @@ function reiniciarQuiz() {
 // Gera relatório em nova aba
 function gerarRelatorio(data) {
   const novaJanela = window.open("", "_blank");
+  const creditoCarbono = data.total_toneladas;
   novaJanela.document.write(`
     <html>
     <head><title>Relatório de Emissões</title></head>
     <body style="font-family:Arial; background:#f5f5f5; padding:20px;">
       <h2>🌍 Relatório de Emissões</h2>
       <p><b>Total:</b> ${data.total_toneladas} toneladas CO₂e/ano</p>
+      <p><b>Créditos de Carbono:</b> ${creditoCarbono.toFixed(2)} créditos</p>
       <p><b>Árvores necessárias:</b> ${data.arvores}</p>
       <h3>Distribuição:</h3>
-      <ul>${Object.entries(data.categorias).map(([k,v]) => `<li>${k}: ${v.toFixed(1)} kg CO₂e</li>`).join("")}</ul>
+      <ul>${Object.entries(data.categorias).map(([k, v]) => `<li>${k}: ${v.toFixed(1)} kg CO₂e</li>`).join("")}</ul>
       <h3>Custos de Compensação:</h3>
-      <ul>${Object.entries(data.compensacoes).map(([k,v]) => `<li>${k}: R$ ${v.toFixed(2)}</li>`).join("")}</ul>
+      <ul>${Object.entries(data.compensacoes).map(([k, v]) => `<li>${k}: R$ ${v.toFixed(2)}</li>`).join("")}</ul>
       <p style="margin-top:30px; color:gray;">Gerado por Uriel Rodrigues de Oliveira — APS IPE © 2025</p>
     </body>
     </html>
@@ -181,29 +204,31 @@ function gerarRelatorio(data) {
   novaJanela.print();
 }
 
-// Função auxiliar - alerta visual
+// Alerta visual
 function exibirAlerta(mensagem) {
   const aviso = document.createElement("div");
   aviso.textContent = mensagem;
-  aviso.style.position = "fixed";
-  aviso.style.bottom = "25px";
-  aviso.style.left = "50%";
-  aviso.style.transform = "translateX(-50%)";
-  aviso.style.background = "#4caf50";
-  aviso.style.color = "#fff";
-  aviso.style.padding = "10px 20px";
-  aviso.style.borderRadius = "10px";
-  aviso.style.boxShadow = "0 2px 8px rgba(0,0,0,0.3)";
-  aviso.style.zIndex = "1000";
-  aviso.style.opacity = "0";
-  aviso.style.transition = "opacity 0.5s";
+  Object.assign(aviso.style, {
+    position: "fixed",
+    bottom: "25px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    background: "#4caf50",
+    color: "#fff",
+    padding: "10px 20px",
+    borderRadius: "10px",
+    boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
+    zIndex: "1000",
+    opacity: "0",
+    transition: "opacity 0.5s"
+  });
   document.body.appendChild(aviso);
   setTimeout(() => aviso.style.opacity = "1", 100);
   setTimeout(() => aviso.style.opacity = "0", 2500);
   setTimeout(() => aviso.remove(), 3000);
 }
 
-// Loader visual enquanto calcula
+// Loader visual
 function exibirLoader(mostrar) {
   if (mostrar) {
     resultadoContainer.innerHTML = `
@@ -225,7 +250,6 @@ function exibirLoader(mostrar) {
 
 mostrarPergunta();
 
-// Animação do loader
 const estilo = document.createElement("style");
 estilo.innerHTML = `
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
