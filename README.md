@@ -1,13 +1,13 @@
 # calculadora-carbono
-APS-Calculadora de Carbono - Trabalho - CC1P07 - CC2P07 - Unip
+APS-Calculadora de Carbono - Trabalho - Unip
 <ul>
   <li>Nome dos Desenvolvedores do Grupo: </li>
   <ul>
-     <li>Evandro - CC2P07</li>
-     <li>Everton - CC2P07</li>
-     <li>Gustavo - CC2P07</li>
-     <li>Uriel - CC2P07</li>
-     <li>Vinicius - CC1P07</li>
+     <li>Evandro - RA: H750BD0 </li>
+     <li>Everton - RA: R8401H8</li>
+     <li>Gustavo - RA: R718972</li>
+     <li>Uriel - RA: R865AJ7</li>
+     <li>Vinicius - RA: R897230</li>
   </ul>
 </ul>
 
