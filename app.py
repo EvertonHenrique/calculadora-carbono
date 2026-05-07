@@ -17,7 +17,7 @@ def index():
 def about():
     return render_template('about.html')
 
-# Acesso ao site de pesquisa
+# Acesso ao site de Creditos de Carbono
 @app.route('/creditosCarbono')
 def creditosCarbono():
     return render_template('creditosCarbono.html')
